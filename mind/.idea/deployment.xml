@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="ben@bot3:22 agent" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+    <option name="confirmBeforeUploading" value="false" />
+    <serverData>
+      <paths name="ben@bot3:22 agent">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_586" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="bot3">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/ben/scorpion/mind" local="$PROJECT_DIR$" web="/tmp" />
+            <mapping deploy="/home/ben/scorpion/mind/src/test" local="$PROJECT_DIR$/src/test" web="/tmp" />
+            <mapping deploy="/home/ben/scorpion/mind/src/main" local="$PROJECT_DIR$/src/main" web="/tmp" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
