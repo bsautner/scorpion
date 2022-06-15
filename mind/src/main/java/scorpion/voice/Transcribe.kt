@@ -49,7 +49,6 @@ class Transcribe(private val listener: VoiceCommandListener) {
         return AudioInputStream(line)
     }
 
-
     private fun getResponseHandler(): StartStreamTranscriptionResponseHandler? {
         return StartStreamTranscriptionResponseHandler.builder()
             .onResponse { r: StartStreamTranscriptionResponse? ->
@@ -84,6 +83,7 @@ class Transcribe(private val listener: VoiceCommandListener) {
             .mediaSampleRateHertz(mediaSampleRateHertz)
             .build()
     }
+
     private fun getCredentials(): AwsCredentialsProvider? {
         return DefaultCredentialsProvider.create()
     }
