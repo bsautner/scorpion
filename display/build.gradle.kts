@@ -29,6 +29,16 @@ kotlin {
         val jvmMain by getting {
             dependencies {
                 implementation(compose.desktop.currentOs)
+                // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
+                implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.0")
+
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2-native-mt")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-javafx:1.6.2")
+                implementation("com.google.code.gson:gson:2.8.9")
+                implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
+                // https://mvnrepository.com/artifact/androidx.compose.ui/ui-geometry
+//                implementation("androidx.compose.ui:ui-geometry:1.1.1")
+
             }
         }
         val jvmTest by getting
