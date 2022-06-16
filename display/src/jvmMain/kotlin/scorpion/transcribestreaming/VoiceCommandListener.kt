@@ -1,4 +1,4 @@
-package scorpion
+package scorpion.transcribestreaming
 
 interface VoiceCommandListener {
 

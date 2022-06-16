@@ -21,20 +21,28 @@ import kotlin.math.roundToInt
 @DelicateCoroutinesApi
 @Composable
 fun MainContent(mqttConnected: Boolean,
+                status: String,
                 update: () -> Unit) {
 
-    Canvas(modifier = Modifier.fillMaxSize()) {
-        rotate(0F) {
-            val center = this.center
-            val c : Color
-            if (mqttConnected) {
-                c = Color.Blue
-            } else {
-                c = Color.Red
+    Column {
+        Row { Text(status) }
+        Row {
+            Canvas(modifier = Modifier.fillMaxSize()) {
+            rotate(0F) {
+                val center = this.center
+                val c : Color
+                if (mqttConnected) {
+                    c = Color.Blue
+                } else {
+                    c = Color.Red
+                }
+                drawCircle(color = c, radius = 10f, center = center)
             }
-            drawCircle(color = c, radius = 10f, center = center)
+        }
+
         }
     }
+
 
 //    Column {
 //        Row {

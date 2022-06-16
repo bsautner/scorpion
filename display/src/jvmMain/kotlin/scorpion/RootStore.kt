@@ -4,13 +4,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.example.myapp.transcribestreaming.Transcribe
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import mqtt.MQTT
 import mqtt.MqttListener
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken
 import org.eclipse.paho.client.mqttv3.MqttMessage
 import scorpion.device.Sonar
+import scorpion.transcribestreaming.VoiceCommandListener
 
 class RootStore: MqttListener, VoiceCommandListener {
 
@@ -29,7 +29,7 @@ class RootStore: MqttListener, VoiceCommandListener {
         private set
 
     private fun initialState(): RootState {
-        return RootState(false)
+        return RootState(false, "connecting...")
     }
 
     fun update() {
@@ -44,24 +44,25 @@ class RootStore: MqttListener, VoiceCommandListener {
     }
 
 
-    data class RootState(val connected: Boolean)
+    data class RootState(val connected: Boolean, val status: String)
+
 
     override fun onConnected() {
         println("MQTT Connected")
         mqtt.subscribe("sonar")
         DisplayScope.launch {
-            Transcribe().start()
+            Transcribe(this@RootStore).start()
         }
 
         setState {
-            RootState(true)
+            RootState(true, "connected to mqtt broker")
         }
     }
 
     override fun connectionLost(cause: Throwable?) {
         cause?.printStackTrace()
         setState {
-            RootState(true)
+            cause?.message?.let { RootState(false, it) }!!
         }
     }
 
@@ -74,5 +75,8 @@ class RootStore: MqttListener, VoiceCommandListener {
 
     override fun onVoiceCommand(cmd: String) {
         println(cmd)
+        setState {
+            RootState(true, cmd)
+        }
     }
 }

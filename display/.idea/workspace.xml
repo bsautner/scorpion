@@ -5,32 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fe6e0e-d417-4d71-9c2a-a2fdfc3f4113" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/AudioStreamPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/BidirectionalStreaming.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/JavaSoundRecorder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/Microphone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/Polly.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/transcribestreaming/StreamTranscriptionBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/transcribestreaming/StreamTranscriptionBehaviorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/transcribestreaming/StreamingRetryApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/transcribestreaming/TranscribeStreamingDemoApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/transcribestreaming/TranscribeStreamingDemoFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/transcribestreaming/TranscribeStreamingRetryClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/AudioStreamPublisher.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/MainKt.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/Transcribe.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../debug/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../debug/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../debug/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../debug/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../debug/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../debug/debug.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainContent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootContent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootStore.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/voice/AudioStreamPublisher.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/voice/DefaultSubscription.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/DefaultSubscription.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/voice/Transcribe.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/VoiceCommandListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/VoiceCommandListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/MainKt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/Transcribe.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/Transcribe.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/src/nativeMain/kotlin/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/src/main/java/com/example/myapp/transcribestreaming/AudioStreamPublisher.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/src/main/java/com/example/myapp/transcribestreaming/DefaultSubscription.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/src/main/java/com/example/myapp/transcribestreaming/MainKt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/src/main/java/com/example/myapp/transcribestreaming/Transcribe.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/src/main/java/org/example/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +136,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion" />
       <recent name="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="scorpion.transcribestreaming" />
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.MainKt">
@@ -215,7 +237,7 @@
       <workItem from="1655309563157" duration="5757000" />
       <workItem from="1655388531215" duration="1814000" />
       <workItem from="1655392696933" duration="1811000" />
-      <workItem from="1655397001420" duration="320000" />
+      <workItem from="1655397001420" duration="1247000" />
     </task>
     <servers />
   </component>

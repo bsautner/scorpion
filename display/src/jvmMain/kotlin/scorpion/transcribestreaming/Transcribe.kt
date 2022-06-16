@@ -12,6 +12,7 @@
 package com.example.myapp.transcribestreaming
 
 import scorpion.AudioStreamPublisher
+import scorpion.transcribestreaming.VoiceCommandListener
 import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider
 import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider
 import software.amazon.awssdk.regions.Region
@@ -25,7 +26,7 @@ import java.util.concurrent.ExecutionException
 import javax.sound.sampled.*
 
 // snippet-start:[transcribe.java-streaming-demo]
-class Transcribe {
+class Transcribe(private val voiceCommandListener: VoiceCommandListener) {
     @Throws(
         URISyntaxException::class,
         ExecutionException::class,
@@ -85,6 +86,7 @@ class Transcribe {
                 val sw = StringWriter()
                 e.printStackTrace(PrintWriter(sw))
                 println("Error Occurred: $sw")
+                e.message?.let { voiceCommandListener.onVoiceCommand(it) }
             }
             .onComplete { println("=== All records stream successfully ===") }
             .subscriber { event: TranscriptResultStream ->
@@ -92,6 +94,7 @@ class Transcribe {
                 if (results.size > 0) {
                     if (!results[0].alternatives()[0].transcript().isEmpty()) {
                         println(results[0].alternatives()[0].transcript())
+                        voiceCommandListener.onVoiceCommand(results[0].alternatives()[0].transcript())
                         //                            System.out.println(results.get(0).isPartial());
 //                            System.out.println(results.get(0).alternatives().size());
 //                            Polly.speak(results.get(0).alternatives().get(0).transcript());

@@ -12,6 +12,7 @@ fun RootContent() {
 
     MainContent(
         state.connected,
+        state.status,
         model::update
     )
 
