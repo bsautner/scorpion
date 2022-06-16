@@ -72,7 +72,15 @@ class RootStore: MqttListener, VoiceCommandListener {
     }
 
     override fun messageArrived(topic: String?, message: MqttMessage?) {
-         Sonar.feed(message?.let { String(it.payload) }.toString())
+         val m = message?.payload?.let { String(it) } ?: ""
+
+        if (m.lowercase().contains("scorpion")) {
+            mqtt.publish(COMMAND, "ack")
+        }
+
+
+//         Sonar.feed(message?.let { String(it.payload) }.toString())
+
     }
 
     override fun deliveryComplete(token: IMqttDeliveryToken?) {
@@ -83,5 +91,9 @@ class RootStore: MqttListener, VoiceCommandListener {
         setState {
             RootState(true, cmd)
         }
+    }
+
+    companion object {
+        private const val COMMAND = "COMMAND"
     }
 }
