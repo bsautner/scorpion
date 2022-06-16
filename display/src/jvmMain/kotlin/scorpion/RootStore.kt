@@ -3,6 +3,7 @@ package scorpion
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import com.example.myapp.transcribestreaming.Transcribe
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import mqtt.MQTT
@@ -15,14 +16,12 @@ class RootStore: MqttListener, VoiceCommandListener {
 
     private val broker =  "tcp://10.0.0.205:1883"
     private val mqtt : MQTT = MQTT(this, broker)
-    private val transcribe: Transcribe = Transcribe((this))
+
     init {
         DisplayScope.launch {
             mqtt.start()
         }
-        DisplayScope.launch {
-            transcribe.start()
-        }
+
     }
 
 
@@ -50,6 +49,10 @@ class RootStore: MqttListener, VoiceCommandListener {
     override fun onConnected() {
         println("MQTT Connected")
         mqtt.subscribe("sonar")
+        DisplayScope.launch {
+            Transcribe().start()
+        }
+
         setState {
             RootState(true)
         }

@@ -11,7 +11,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import kotlinx.coroutines.launch
-import scorpion.DisplayScope
+
 import scorpion.RootContent
 
 @Composable
@@ -30,3 +30,5 @@ fun main() = application {
         App()
     }
 }
+
+
