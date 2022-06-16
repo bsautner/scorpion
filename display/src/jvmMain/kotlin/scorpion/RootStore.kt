@@ -11,14 +11,17 @@ import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken
 import org.eclipse.paho.client.mqttv3.MqttMessage
 import scorpion.device.Sonar
 
-class RootStore: MqttListener {
+class RootStore: MqttListener, VoiceCommandListener {
 
     private val broker =  "tcp://10.0.0.205:1883"
     private val mqtt : MQTT = MQTT(this, broker)
-
+    private val transcribe: Transcribe = Transcribe((this))
     init {
-        GlobalScope.launch {
+        DisplayScope.launch {
             mqtt.start()
+        }
+        DisplayScope.launch {
+            transcribe.start()
         }
     }
 
@@ -65,4 +68,8 @@ class RootStore: MqttListener {
 
     override fun deliveryComplete(token: IMqttDeliveryToken?) {
      }
+
+    override fun onVoiceCommand(cmd: String) {
+        println(cmd)
+    }
 }

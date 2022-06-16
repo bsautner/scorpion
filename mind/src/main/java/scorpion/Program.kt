@@ -46,7 +46,7 @@ class Program : MqttListener, VoiceCommandListener{
     }
 
     override fun onVoiceCommand(cmd: String) {
-
+        println("Got Voice Command ${cmd}")
 
         if (cmd.lowercase().contains("scorpion")) {
 

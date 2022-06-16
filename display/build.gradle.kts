@@ -29,6 +29,17 @@ kotlin {
         val jvmMain by getting {
             dependencies {
                 implementation(compose.desktop.currentOs)
+
+                // https://mvnrepository.com/artifact/software.amazon.awssdk/polly
+                implementation("software.amazon.awssdk:polly:2.17.209")
+// https://mvnrepository.com/artifact/javazoom/jlayer
+                implementation("javazoom:jlayer:1.0.1")
+
+                // https://mvnrepository.com/artifact/org.reactivestreams/reactive-streams
+                implementation("org.reactivestreams:reactive-streams:1.0.4")
+// https://mvnrepository.com/artifact/software.amazon.awssdk/transcribestreaming
+                implementation("software.amazon.awssdk:transcribestreaming:2.17.209")
+
                 // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
                 implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.0")
 
