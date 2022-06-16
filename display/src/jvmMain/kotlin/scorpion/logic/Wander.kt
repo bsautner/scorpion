@@ -5,12 +5,14 @@ import scorpion.device.Sonar
 
 class Wander(private val mqtt: MQTT) {
     private val COMMAND = "COMMAND"
+    private var stopped = false
     enum class Command {
         STOP, SPIN, FORWARD, REVERSE
     }
 
     suspend fun start() {
 //            mqtt.publish(COMMAND, Command.STOP.name)
+        if (! stopped) {
             delay(100)
             while (Sonar.clear()) {
                 mqtt.publish(COMMAND, Command.FORWARD.name)
@@ -21,14 +23,22 @@ class Wander(private val mqtt: MQTT) {
             mqtt.publish(COMMAND, Command.REVERSE.name)
             delay(250)
             mqtt.publish(COMMAND, Command.STOP.name)
-            while (! Sonar.clear() ) {
+            while (!Sonar.clear()) {
 
                 mqtt.publish(COMMAND, Command.SPIN.name)
                 delay(100)
             }
             start()
+        }
 
     }
 
+    fun stop() {
+        this.stopped = true
+    }
+
+    fun reset() {
+        this.stopped = false
+    }
 
 }

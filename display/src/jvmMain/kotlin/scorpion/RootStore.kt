@@ -98,10 +98,12 @@ class RootStore: MqttListener, VoiceCommandListener {
         if (cmd.lowercase().contains("go play")) {
             mqtt.publish(COMMAND, "ack")
             DisplayScope.launch {
+                wander.reset()
                  wander.start()
             }
         }
         if (cmd.lowercase().contains("stop")) {
+            wander.stop()
             mqtt.publish(COMMAND, "ack")
             mqtt.publish(COMMAND, "STOP")
 
