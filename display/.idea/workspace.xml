@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fe6e0e-d417-4d71-9c2a-a2fdfc3f4113" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../python/hardware/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/hardware/led.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/hardware/motors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/hardware/sonar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../debug/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../debug/.idea/aws.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../debug/.idea/misc.xml" beforeDir="false" />
@@ -16,13 +12,18 @@
       <change beforePath="$PROJECT_DIR$/../debug/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../debug/debug.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootStore.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../python/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/.idea/aws.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/.idea/compiler.xml" beforeDir="false" />
@@ -74,17 +75,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="display" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="display" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="display" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="shadow" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -241,6 +231,8 @@
       <workItem from="1655397001420" duration="2715000" />
       <workItem from="1655399839150" duration="825000" />
       <workItem from="1655401093176" duration="599000" />
+      <workItem from="1655403312239" duration="746000" />
+      <workItem from="1655404069494" duration="310000" />
     </task>
     <servers />
   </component>

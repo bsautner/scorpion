@@ -73,10 +73,9 @@ class RootStore: MqttListener, VoiceCommandListener {
 
     override fun messageArrived(topic: String?, message: MqttMessage?) {
          val m = message?.payload?.let { String(it) } ?: ""
+         println("$topic $m")
 
-        if (m.lowercase().contains("scorpion")) {
-            mqtt.publish(COMMAND, "ack")
-        }
+
 
 
 //         Sonar.feed(message?.let { String(it.payload) }.toString())
@@ -88,6 +87,9 @@ class RootStore: MqttListener, VoiceCommandListener {
 
     override fun onVoiceCommand(cmd: String) {
         println(cmd)
+        if (cmd.lowercase().contains("scorpion")) {
+            mqtt.publish(COMMAND, "ack")
+        }
         setState {
             RootState(true, cmd)
         }
