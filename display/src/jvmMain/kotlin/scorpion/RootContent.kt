@@ -2,6 +2,7 @@ package scorpion
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import scorpion.device.Sonar
 
 @Composable
 fun RootContent() {
@@ -13,6 +14,8 @@ fun RootContent() {
     MainContent(
         state.connected,
         state.status,
+        state.sonar,
+        state.s,
         model::update
     )
 

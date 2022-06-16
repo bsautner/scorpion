@@ -1,7 +1,7 @@
 package scorpion.device
 
 object Sonar {
-
+    val distance = 50
     const val FRONT_SONAR = "front_sonar"
     const val RIGHT_FRONT_SONAR = "right_front_sonar"
     const val LEFT_FRONT_SONAR = "left_front_sonar"
@@ -21,6 +21,10 @@ object Sonar {
         println(it)
         val split = it.replace("\"", "").split(",")
         data[split[0]] = split[1].toDouble()
+    }
+
+    fun clear() : Boolean {
+        return data[RIGHT_FRONT_SONAR]!! > distance && data[LEFT_FRONT_SONAR]!! > distance && data[FRONT_SONAR]!! > distance
     }
 
 

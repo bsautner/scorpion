@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fe6e0e-d417-4d71-9c2a-a2fdfc3f4113" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/logic/Wander.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../debug/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../debug/.idea/aws.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../debug/.idea/misc.xml" beforeDir="false" />
@@ -12,7 +13,10 @@
       <change beforePath="$PROJECT_DIR$/../debug/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../debug/debug.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainContent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootContent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/device/Sonar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/device/Sonar.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
@@ -23,7 +27,9 @@
       <change beforePath="$PROJECT_DIR$/../python/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/main/hardware/sonar.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/hardware/sonar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/main/network/mqtt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/network/mqtt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/.idea/aws.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/.idea/compiler.xml" beforeDir="false" />
@@ -105,26 +111,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ben/scorpion/display/src/jvmMain/kotlin/scorpion&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "/home/ben/scorpion/display/src/jvmMain/kotlin/scorpion/logic",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/logic" />
       <recent name="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion" />
       <recent name="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp" />
     </key>
@@ -232,7 +239,7 @@
       <workItem from="1655399839150" duration="825000" />
       <workItem from="1655401093176" duration="599000" />
       <workItem from="1655403312239" duration="746000" />
-      <workItem from="1655404069494" duration="310000" />
+      <workItem from="1655404069494" duration="3985000" />
     </task>
     <servers />
   </component>

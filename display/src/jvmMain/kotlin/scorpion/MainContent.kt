@@ -8,6 +8,7 @@ import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.unit.IntOffset
@@ -22,22 +23,51 @@ import kotlin.math.roundToInt
 @Composable
 fun MainContent(mqttConnected: Boolean,
                 status: String,
+                sonar: Sonar,
+                s: String,
                 update: () -> Unit) {
 
+    var center : Offset = Offset(0f, 0f)
+
     Column {
-        Row { Text(status) }
+        Row {
+            Column {
+                Button(onClick = {
+                    GlobalScope.launch {
+                        Runner(update).updateClock()
+                    }
+                }) {
+                    Text("GO")
+                }
+            }
+            Column { Text(s) }
+          Column {
+              Text(status)
+          }
+        }
         Row {
             Canvas(modifier = Modifier.fillMaxSize()) {
             rotate(0F) {
-                val center = this.center
+                center = this.center
                 val c : Color
                 if (mqttConnected) {
                     c = Color.Blue
                 } else {
                     c = Color.Red
                 }
-                drawCircle(color = c, radius = 10f, center = center)
+                drawCircle(color = c, radius = 40f, center = center)
+
+
             }
+                rotate(0F, center) {
+                    drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.FRONT_SONAR) +20) * -1).roundToInt()))))
+                }
+                rotate(45F, center) {
+                    drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.RIGHT_FRONT_SONAR)+20) * -1).roundToInt()))))
+                }
+                rotate(-45F, center) {
+                    drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.LEFT_FRONT_SONAR) +20) * -1).roundToInt()))))
+                }
         }
 
         }
@@ -59,12 +89,7 @@ fun MainContent(mqttConnected: Boolean,
 //        }
 //        Row {
 //            Canvas(modifier = Modifier.fillMaxSize()) {
-//                rotate(45F, this.center) {
-//                    drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, ((Sonar.getDistance(Sonar.RIGHT_FRONT_SONAR) * -1).roundToInt()))))
-//                }
-//                rotate(-45F, this.center) {
-//                    drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, ((Sonar.getDistance(Sonar.LEFT_FRONT_SONAR) * -1).roundToInt()))))
-//                }
+
 //
 //                rotate(90F, this.center.plus(IntOffset(0, -20))) {
 //                    drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, ((Sonar.getDistance(Sonar.DOWN_FRONT_SONAR) * -1).roundToInt()))))

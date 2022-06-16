@@ -1,5 +1,6 @@
 package scorpion
 
+import Wander
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -18,6 +19,7 @@ class RootStore: MqttListener, VoiceCommandListener {
     private val broker =  "tcp://10.0.0.205:1883"
     private val mqtt : MQTT = MQTT(this, broker)
     val polly: Polly = Polly()
+    val wander = Wander(mqtt)
 
     init {
         DisplayScope.launch {
@@ -31,14 +33,14 @@ class RootStore: MqttListener, VoiceCommandListener {
         private set
 
     private fun initialState(): RootState {
-        return RootState(false, "connecting...")
+        return RootState(false, "connecting...", Sonar, System.currentTimeMillis().toString())
     }
 
     fun update() {
 
-//        setState{
-//            RootState(System.currentTimeMillis().toString())
-//        }
+        setState{
+            RootState(state.connected, state.status, Sonar, System.currentTimeMillis().toString())
+        }
     }
 
     private inline fun setState(update: RootState.() -> RootState) {
@@ -46,28 +48,28 @@ class RootStore: MqttListener, VoiceCommandListener {
     }
 
 
-    data class RootState(val connected: Boolean, val status: String)
+    data class RootState(val connected: Boolean, val status: String, val sonar: Sonar, val s : String)
 
 
     override fun onConnected() {
         println("MQTT Connected")
         mqtt.subscribe("sonar")
         DisplayScope.launch {
-            polly.speak("Connected!")
+//            polly.speak("Connected!")
         }
         DisplayScope.launch {
             Transcribe(this@RootStore).start()
         }
 
         setState {
-            RootState(true, "connected to mqtt broker")
+            RootState(true, "connected to mqtt broker", Sonar, System.currentTimeMillis().toString())
         }
     }
 
     override fun connectionLost(cause: Throwable?) {
         cause?.printStackTrace()
         setState {
-            cause?.message?.let { RootState(false, it) }!!
+            cause?.message?.let { RootState(false, it, Sonar, System.currentTimeMillis().toString()) }!!
         }
     }
 
@@ -76,9 +78,12 @@ class RootStore: MqttListener, VoiceCommandListener {
          println("$topic $m")
 
 
+        if (topic == "sonar") {
+            Sonar.feed(message?.let { String(it.payload) }.toString())
+        }
 
 
-//         Sonar.feed(message?.let { String(it.payload) }.toString())
+//
 
     }
 
@@ -90,8 +95,21 @@ class RootStore: MqttListener, VoiceCommandListener {
         if (cmd.lowercase().contains("scorpion")) {
             mqtt.publish(COMMAND, "ack")
         }
+        if (cmd.lowercase().contains("go play")) {
+            mqtt.publish(COMMAND, "ack")
+            DisplayScope.launch {
+                if (cmd.lowercase().contains("scorpion")) {
+                    mqtt.publish(COMMAND, "ack")
+                }
+            }
+        }
+        if (cmd.lowercase().contains("stop")) {
+            mqtt.publish(COMMAND, "ack")
+            mqtt.publish(COMMAND, "STOP")
+
+        }
         setState {
-            RootState(true, cmd)
+            RootState(true, cmd, Sonar, System.currentTimeMillis().toString())
         }
     }
 
