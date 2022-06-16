@@ -11,11 +11,13 @@ import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken
 import org.eclipse.paho.client.mqttv3.MqttMessage
 import scorpion.device.Sonar
 import scorpion.transcribestreaming.VoiceCommandListener
+import scorpion.voice.Polly
 
 class RootStore: MqttListener, VoiceCommandListener {
 
     private val broker =  "tcp://10.0.0.205:1883"
     private val mqtt : MQTT = MQTT(this, broker)
+    val polly: Polly = Polly()
 
     init {
         DisplayScope.launch {
@@ -50,6 +52,9 @@ class RootStore: MqttListener, VoiceCommandListener {
     override fun onConnected() {
         println("MQTT Connected")
         mqtt.subscribe("sonar")
+        DisplayScope.launch {
+            polly.speak("Connected!")
+        }
         DisplayScope.launch {
             Transcribe(this@RootStore).start()
         }

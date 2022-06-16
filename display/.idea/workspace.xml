@@ -11,13 +11,7 @@
       <change beforePath="$PROJECT_DIR$/../debug/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../debug/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../debug/debug.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainContent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootContent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootStore.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/VoiceCommandListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/VoiceCommandListener.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/MainKt.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/Transcribe.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/transcribestreaming/Transcribe.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mind/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mind/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
@@ -237,7 +231,7 @@
       <workItem from="1655309563157" duration="5757000" />
       <workItem from="1655388531215" duration="1814000" />
       <workItem from="1655392696933" duration="1811000" />
-      <workItem from="1655397001420" duration="1247000" />
+      <workItem from="1655397001420" duration="1833000" />
     </task>
     <servers />
   </component>
