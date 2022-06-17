@@ -1,7 +1,7 @@
 package scorpion.device
 
 object Sonar {
-    val distance = 50
+    val distance = 30
     const val FRONT_SONAR = "front_sonar"
     const val RIGHT_FRONT_SONAR = "right_front_sonar"
     const val LEFT_FRONT_SONAR = "left_front_sonar"
@@ -24,7 +24,7 @@ object Sonar {
     }
 
     fun clear() : Boolean {
-        return data[RIGHT_FRONT_SONAR]!! > distance && data[LEFT_FRONT_SONAR]!! > distance && data[FRONT_SONAR]!! > distance
+        return data[RIGHT_FRONT_SONAR]!! > distance && data[LEFT_FRONT_SONAR]!! > distance && data[FRONT_SONAR]!! > distance && data[DOWN_FRONT_SONAR]!! > 40
     }
 
 

@@ -56,7 +56,7 @@ fun MainContent(mqttConnected: Boolean,
                     c = Color.Red
                 }
                 drawCircle(color = c, radius = 40f, center = center)
-
+                drawLine(color = Color.Red, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.DOWN_FRONT_SONAR) +20)).roundToInt()))))
 
             }
                 rotate(0F, center) {
@@ -68,6 +68,8 @@ fun MainContent(mqttConnected: Boolean,
                 rotate(-45F, center) {
                     drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.LEFT_FRONT_SONAR) +20) * -1).roundToInt()))))
                 }
+
+
         }
 
         }

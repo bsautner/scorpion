@@ -7,12 +7,11 @@ class Wander(private val mqtt: MQTT) {
     private val COMMAND = "COMMAND"
     private var stopped = false
     enum class Command {
-        STOP, SPIN, FORWARD, REVERSE
+        STOP, LEFT, RIGHT, FORWARD, REVERSE
     }
 
     suspend fun start() {
-//            mqtt.publish(COMMAND, Command.STOP.name)
-        if (! stopped) {
+         if (! stopped) {
             delay(100)
             while (Sonar.clear()) {
                 mqtt.publish(COMMAND, Command.FORWARD.name)
@@ -24,8 +23,11 @@ class Wander(private val mqtt: MQTT) {
             delay(250)
             mqtt.publish(COMMAND, Command.STOP.name)
             while (!Sonar.clear()) {
-
-                mqtt.publish(COMMAND, Command.SPIN.name)
+                if (Sonar.getDistance(Sonar.LEFT_FRONT_SONAR) > Sonar.getDistance(Sonar.RIGHT_FRONT_SONAR)) {
+                    mqtt.publish(COMMAND, Command.LEFT.name)
+                } else {
+                    mqtt.publish(COMMAND, Command.RIGHT.name)
+                }
                 delay(100)
             }
             start()
