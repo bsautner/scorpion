@@ -74,25 +74,18 @@ def reverse():
         motor_d[1].ChangeDutyCycle(max)
 
 
-def spin():
-
+def right():
+        stop()
         motor_a[1].ChangeDutyCycle(max-20)
         motor_b[0].ChangeDutyCycle(max-20)
         motor_c[1].ChangeDutyCycle(max-20)
         motor_d[0].ChangeDutyCycle(max-20)
 
-        # motor_a[1].ChangeDutyCycle(0)
-        # motor_b[1].ChangeDutyCycle(0)
-        # motor_c[1].ChangeDutyCycle(0)
-        # motor_d[1].ChangeDutyCycle(0)
-        # sleep(1)
-        # motor_a[1].ChangeDutyCycle(max)
-        # motor_b[1].ChangeDutyCycle(max)
-        # motor_c[1].ChangeDutyCycle(max)
-        # motor_d[1].ChangeDutyCycle(max)
-        #
-        # motor_a[0].ChangeDutyCycle(0)
-        # motor_b[0].ChangeDutyCycle(0)
-        # motor_c[0].ChangeDutyCycle(0)
-        # motor_d[0].ChangeDutyCycle(0)
+def left():
+        stop()
+        motor_a[0].ChangeDutyCycle(max-20)
+        motor_b[1].ChangeDutyCycle(max-20)
+        motor_c[0].ChangeDutyCycle(max-20)
+        motor_d[1].ChangeDutyCycle(max-20)
+
 

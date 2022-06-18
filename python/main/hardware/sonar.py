@@ -16,21 +16,21 @@ topic = "sonar"
 
 
 def sonar_run(mqtt):
-    print("Started Sonar Thread")
+    print("Started Sonar Thread...")
     while True:
         try:
             lf = left_front_sonar.distance
-            mqtt.publish(topic, f'left_front_sonar,{lf}')
-            time.sleep(.5)
+            mqtt.publish(topic=topic, payload=f'left_front_sonar,{lf}')
+            time.sleep(.1)
             rf = right_front_sonar.distance
-            mqtt.publish(topic, f'right_front_sonar,{rf}')
-            time.sleep(.5)
+            mqtt.publish(topic=topic, payload=f'right_front_sonar,{rf}')
+            time.sleep(.1)
             fs = front_sonar.distance
-            mqtt.publish(topic, f'front_sonar,{fs}')
-            time.sleep(.5)
+            mqtt.publish(topic=topic, payload=f'front_sonar,{fs}')
+            time.sleep(.1)
             d = down_front_sonar.distance
-            mqtt.publish(topic, f'down_front_sonar,{d}')
-            time.sleep(.5)
+            mqtt.publish(topic=topic, payload=f'down_front_sonar,{d}')
+            time.sleep(.1)
 
             # if lf < 10 or rf < 10 or fs < 10 or d < 10:
             #     led.blink(led.BLUE, 1, 0.1)

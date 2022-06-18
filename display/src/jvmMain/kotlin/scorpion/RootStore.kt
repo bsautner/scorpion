@@ -16,7 +16,7 @@ import scorpion.voice.Polly
 
 class RootStore: MqttListener, VoiceCommandListener {
 
-    private val broker =  "tcp://10.0.0.205:1883"
+    private val broker =  "tcp://localhost:1883"
     private val mqtt : MQTT = MQTT(this, broker)
     val polly: Polly = Polly()
     val wander = Wander(mqtt)
