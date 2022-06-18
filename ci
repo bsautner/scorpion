@@ -1,5 +1,6 @@
 git fetch
 git pull
+chmod +x ci
 cd display
 ./gradlew assemble shadowJar
 cd ./build/libs
