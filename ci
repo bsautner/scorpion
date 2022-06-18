@@ -1,1 +1,6 @@
-./gradlew clean assemble shadowJar
+git fetch
+git pull origin/main
+cd display
+./gradlew assemble shadowJar
+cd ./build/libs
+java -cp display-1.0-SNAPSHOT-all.jar MainKt
