@@ -1,5 +1,5 @@
 git fetch
-git pull origin/main
+git pull
 cd display
 ./gradlew assemble shadowJar
 cd ./build/libs
