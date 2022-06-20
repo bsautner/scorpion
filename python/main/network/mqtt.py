@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt_client
 import json
 import random
 
-broker = "10.0.0.205"
+broker = "localhost"
 port = 1883
 client_id = f'python-mqtt-{random.randint(0, 1000)}'
 username = 'ben'

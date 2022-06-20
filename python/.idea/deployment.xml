@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="ben@bot1:22 password" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="ben@scorp:22 password" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
-      <paths name="ben@bot1:22 password">
+      <paths name="ben@scorp:22 password">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/pycharm_project_455" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/pycharm_project_7" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="bot1">
+      <paths name="scorp">
         <serverdata>
           <mappings>
             <mapping deploy="/home/ben/scorpion/python" local="$PROJECT_DIR$" web="/" />

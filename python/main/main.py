@@ -1,14 +1,11 @@
 #!/usr/bin/env python
 import time
-from random import random
 
-import vocals.lights as lights
 import network.mqtt as mqtt
 import hardware.led as led
 import threading
 import hardware.sonar as sonar
 import hardware.motors as motors
-import pygame as pygame
 
 def on_disconnect():
     print("mqtt disconnected")
@@ -17,7 +14,7 @@ def on_connect(client, userdata, flags, rc):
     if rc == 0:
         print("Connected to MQTT Broker!")
         client.subscribe("#")
-        threading.Thread(target=sonar.sonar_run, args=(mqtt,)).start()
+        # threading.Thread(target=sonar.sonar_run, args=(mqtt,)).start()
         # sonar.sonar_run(mqtt)
     else:
 
@@ -26,7 +23,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(self, userdata, msg):
 
     cmd = bytes(msg.payload).decode()
-    pygame.mouse.set_pos((random.choice(range(600)), random.choice(range(600))))
+    # pygame.mouse.set_pos((random.choice(range(600)), random.choice(range(600))))
 
     if cmd == "ack":
         threading.Thread(target=led.blink, args=(led.GREEN, 5, .2)).start()
