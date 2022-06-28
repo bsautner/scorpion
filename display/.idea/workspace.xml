@@ -5,17 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fe6e0e-d417-4d71-9c2a-a2fdfc3f4113" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandContent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandVM.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Program.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/logic/SimSonar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/Command.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/main/camera/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/main/camera/base_camera.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/main/camera/camera_opencv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/main/camera/start_camera.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/main/camera/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python/main/mag.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainContent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/RootStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/logic/Wander.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/logic/Wander.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/MQTT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/MQTT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/Topic.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/Topic.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/.idea/webServers.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/main/hardware/motors.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/hardware/motors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/main/hardware/sonar.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/hardware/sonar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python/main/network/mqtt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/network/mqtt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/main/vocals/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/main/vocals/lights.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/python.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +66,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Enum" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -94,6 +112,7 @@
       <recent name="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="scorpion.mqtt" />
       <recent name="scorpion.transcribestreaming" />
     </key>
   </component>
@@ -202,7 +221,9 @@
       <workItem from="1655550481338" duration="934000" />
       <workItem from="1655551768220" duration="1251000" />
       <workItem from="1655728997165" duration="451000" />
-      <workItem from="1655729472124" duration="1526000" />
+      <workItem from="1655729472124" duration="3419000" />
+      <workItem from="1656067449716" duration="5534000" />
+      <workItem from="1656413964913" duration="18276000" />
     </task>
     <servers />
   </component>
@@ -219,5 +240,29 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandVM.kt</url>
+          <line>29</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Program.kt</url>
+          <line>93</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Program.kt</url>
+          <line>98</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

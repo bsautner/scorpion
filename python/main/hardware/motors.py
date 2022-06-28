@@ -3,12 +3,12 @@ import RPi.GPIO as GPIO
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-pin_motor_1_a = 18  # GPIO12
-pin_motor_1_b = 23  # GPIO16
+pin_motor_1_a = 23  # GPIO12
+pin_motor_1_b = 18  # GPIO16
 pin_motor_2_a = 25  # GPIO18
 pin_motor_2_b = 24  # GPIO25
-pin_motor_3_a = 12  # GPIO36
-pin_motor_3_b = 16  # GPIO32
+pin_motor_3_a = 16  # GPIO36
+pin_motor_3_b = 12  # GPIO32
 pin_motor_4_a = 21  # GPOIO38
 pin_motor_4_b = 20  # GPIO40
 

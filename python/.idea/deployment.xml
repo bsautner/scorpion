@@ -6,14 +6,7 @@
       <paths name="ben@scorp:22 password">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/pycharm_project_7" local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="scorp">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/home/ben/scorpion/python" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/ben/scorpion/python" local="$PROJECT_DIR$" web="/home/ben/scorpion/python" />
           </mappings>
         </serverdata>
       </paths>

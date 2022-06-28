@@ -3,23 +3,35 @@
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
+import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.application
-import scorpion.RootContent
+import kotlinx.coroutines.launch
+import scorpion.*
 
 @Composable
 @Preview
 fun App() {
 
+
+
     MaterialTheme {
-        RootContent()
+//        RootContent()
+        CommandContent()
+
     }
 }
 
 fun main() = application {
 
 
-    Window(onCloseRequest = ::exitApplication) {
+    DisplayScope.launch {
+        Program().start()
+    }
+
+    Window(state = WindowState(width = 1024.dp, height = 800.dp), onCloseRequest = ::exitApplication) {
         App()
     }
 }

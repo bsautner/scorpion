@@ -5,6 +5,8 @@ import org.eclipse.paho.client.mqttv3.MqttClient
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions
 import org.eclipse.paho.client.mqttv3.MqttMessage
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence
+import scorpion.mqtt.Command
+import scorpion.mqtt.Topic
 import java.util.*
 
 class MQTT(private val listener: MqttListener, private val broker: String) {
@@ -37,13 +39,13 @@ class MQTT(private val listener: MqttListener, private val broker: String) {
 
     }
 
-     fun publish(topic: String, data: String) {
-         println("MQTT TX $topic $data")
+     fun publish(topic: Topic, command: Command) {
+         println("MQTT TX $topic ${command.name}")
 
-        val message = MqttMessage(data.toByteArray())
+        val message = MqttMessage(command.name.toByteArray())
         message.qos = qos
          if (client.isConnected) {
-             client.publish(topic, message)
+             client.publish(topic.name, message)
          }
 
 

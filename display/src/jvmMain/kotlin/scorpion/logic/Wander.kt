@@ -2,31 +2,28 @@
 import kotlinx.coroutines.delay
 import mqtt.MQTT
 import scorpion.device.Sonar
+import scorpion.mqtt.Command
+import scorpion.mqtt.Topic
 
 class Wander(private val mqtt: MQTT) {
-    private val COMMAND = "COMMAND"
-    private var stopped = false
-    enum class Command {
-        STOP, LEFT, RIGHT, FORWARD, REVERSE
-    }
 
     suspend fun start() {
-         if (! stopped) {
+
             delay(100)
             while (Sonar.clear()) {
-                mqtt.publish(COMMAND, Command.FORWARD.name)
+                mqtt.publish(Topic.COMMAND, Command.FORWARD)
                 delay(100)
             }
-            mqtt.publish(COMMAND, Command.STOP.name)
+            mqtt.publish(Topic.COMMAND, Command.STOP)
             delay(1000)
-            mqtt.publish(COMMAND, Command.REVERSE.name)
+            mqtt.publish(Topic.COMMAND, Command.REVERSE)
             delay(250)
-            mqtt.publish(COMMAND, Command.STOP.name)
+            mqtt.publish(Topic.COMMAND, Command.STOP)
             while (!Sonar.clear()) {
                 if (Sonar.getDistance(Sonar.LEFT_FRONT_SONAR) > Sonar.getDistance(Sonar.RIGHT_FRONT_SONAR)) {
-                    mqtt.publish(COMMAND, Command.LEFT.name)
+                    mqtt.publish(Topic.COMMAND, Command.LEFT)
                 } else {
-                    mqtt.publish(COMMAND, Command.RIGHT.name)
+                    mqtt.publish(Topic.COMMAND, Command.RIGHT)
                 }
                 delay(100)
             }
@@ -35,12 +32,3 @@ class Wander(private val mqtt: MQTT) {
 
     }
 
-    fun stop() {
-        this.stopped = true
-    }
-
-    fun reset() {
-        this.stopped = false
-    }
-
-}

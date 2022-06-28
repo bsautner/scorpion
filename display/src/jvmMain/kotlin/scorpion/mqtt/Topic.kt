@@ -1,5 +1,9 @@
-package mqtt
+package scorpion.mqtt
 
 enum class Topic {
-    RAW_LIDAR
+
+    COMMAND, VOICE, MAG, SONAR
+
+
+
 }

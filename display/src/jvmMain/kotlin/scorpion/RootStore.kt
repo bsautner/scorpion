@@ -5,18 +5,22 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.example.myapp.transcribestreaming.Transcribe
+import com.google.gson.Gson
 import kotlinx.coroutines.launch
 import mqtt.MQTT
 import mqtt.MqttListener
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken
 import org.eclipse.paho.client.mqttv3.MqttMessage
 import scorpion.device.Sonar
+import scorpion.mqtt.Topic
 import scorpion.transcribestreaming.VoiceCommandListener
 import scorpion.voice.Polly
+import java.lang.Math.PI
+import java.lang.Math.atan2
 
 class RootStore: MqttListener, VoiceCommandListener {
 
-    private val broker =  "tcp://localhost:1883"
+    private val broker =  "tcp://scorpion:1883"
     private val mqtt : MQTT = MQTT(this, broker)
     val polly: Polly = Polly()
     val wander = Wander(mqtt)
@@ -54,6 +58,7 @@ class RootStore: MqttListener, VoiceCommandListener {
     override fun onConnected() {
         println("MQTT Connected")
         mqtt.subscribe("sonar")
+        mqtt.subscribe("MAG")
         DisplayScope.launch {
 //            polly.speak("Connected!")
         }
@@ -75,11 +80,28 @@ class RootStore: MqttListener, VoiceCommandListener {
 
     override fun messageArrived(topic: String?, message: MqttMessage?) {
          val m = message?.payload?.let { String(it) } ?: ""
-         println("$topic $m")
+//         println("$topic $m")
 
 
         if (topic == "sonar") {
             Sonar.feed(message?.let { String(it.payload) }.toString())
+        }
+
+        if (topic == "MAG") {
+            message?.let {
+                val p = String(it.payload)
+                val vals = Gson().fromJson(p, Array<Double>::class.java)
+
+                val x = vals[0]
+                val y = vals[1]
+                val z = vals[2]
+                var heading  =  kotlin.math.atan2(y, x) * 180 / PI
+
+
+                println(heading)
+
+
+            }
         }
 
 
@@ -91,29 +113,8 @@ class RootStore: MqttListener, VoiceCommandListener {
      }
 
     override fun onVoiceCommand(cmd: String) {
-        println(cmd)
-        if (cmd.lowercase().contains("scorpion")) {
-            mqtt.publish(COMMAND, "ack")
-        }
-        if (cmd.lowercase().contains("go play")) {
-            mqtt.publish(COMMAND, "ack")
-            DisplayScope.launch {
-                wander.reset()
-                 wander.start()
-            }
-        }
-        if (cmd.lowercase().contains("stop")) {
-            wander.stop()
-            mqtt.publish(COMMAND, "ack")
-            mqtt.publish(COMMAND, "STOP")
 
-        }
-        setState {
-            RootState(true, cmd, Sonar, System.currentTimeMillis().toString())
-        }
     }
 
-    companion object {
-        private const val COMMAND = "COMMAND"
-    }
+
 }

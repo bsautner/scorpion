@@ -4,6 +4,7 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -12,6 +13,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.plus
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
@@ -27,53 +29,59 @@ fun MainContent(mqttConnected: Boolean,
                 s: String,
                 update: () -> Unit) {
 
-    var center : Offset = Offset(0f, 0f)
+    var center = Offset(0f, 0f)
 
-    Column {
-        Row {
-            Column {
-                Button(onClick = {
-                    GlobalScope.launch {
-                        Runner(update).updateClock()
+    Row(modifier = Modifier.width(1024.dp)) {
+        Column(modifier = Modifier.width(800.dp)) {
+            Row {
+                Column {
+                    Button(onClick = {
+                        GlobalScope.launch {
+                            Runner(update).updateClock()
+                        }
+                    }) {
+                        Text("GO")
                     }
-                }) {
-                    Text("GO")
+                }
+                Column { Text(s) }
+                Column {
+                    Text(status)
                 }
             }
-            Column { Text(s) }
-          Column {
-              Text(status)
-          }
-        }
-        Row {
-            Canvas(modifier = Modifier.fillMaxSize()) {
-            rotate(0F) {
-                center = this.center
-                val c : Color
-                if (mqttConnected) {
-                    c = Color.Blue
-                } else {
-                    c = Color.Red
+            Row {
+                Canvas(modifier = Modifier.fillMaxSize()) {
+                    rotate(0F) {
+                        center = this.center
+                        val c : Color
+                        if (mqttConnected) {
+                            c = Color.Blue
+                        } else {
+                            c = Color.Red
+                        }
+                        drawCircle(color = c, radius = 40f, center = center)
+                        drawLine(color = Color.Red, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.DOWN_FRONT_SONAR) +20)).roundToInt()))))
+
+                    }
+                    rotate(0F, center) {
+                        drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.FRONT_SONAR) +20) * -1).roundToInt()))))
+                    }
+                    rotate(45F, center) {
+                        drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.RIGHT_FRONT_SONAR)+20) * -1).roundToInt()))))
+                    }
+                    rotate(-45F, center) {
+                        drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.LEFT_FRONT_SONAR) +20) * -1).roundToInt()))))
+                    }
+
+
                 }
-                drawCircle(color = c, radius = 40f, center = center)
-                drawLine(color = Color.Red, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.DOWN_FRONT_SONAR) +20)).roundToInt()))))
 
             }
-                rotate(0F, center) {
-                    drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.FRONT_SONAR) +20) * -1).roundToInt()))))
-                }
-                rotate(45F, center) {
-                    drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.RIGHT_FRONT_SONAR)+20) * -1).roundToInt()))))
-                }
-                rotate(-45F, center) {
-                    drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonar.getDistance(Sonar.LEFT_FRONT_SONAR) +20) * -1).roundToInt()))))
-                }
-
-
         }
-
+        Column(Modifier.width(200.dp)) {
+            Text("hello")
         }
     }
+
 
 
 //    Column {
