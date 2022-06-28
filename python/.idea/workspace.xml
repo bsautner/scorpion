@@ -5,33 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b87618-bc6f-4c43-a34b-11a8bec05adc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/CommandContent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/CommandVM.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/MainScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/Program.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/logic/SimSonar.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/mqtt/Command.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/camera/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/camera/base_camera.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/camera/camera_opencv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/camera/start_camera.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/camera/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/mag.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../display/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../display/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/MainContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/MainContent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/RootStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/RootStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/CommandContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/CommandContent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/CommandVM.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/CommandVM.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/MainContent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/MainScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/MainScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/Program.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/Program.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/RootContent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/RootStore.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/device/Sonar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/device/Sonar.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/logic/SimSonar.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/logic/Wander.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/logic/Wander.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/mqtt/MQTT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/mqtt/MQTT.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/mqtt/Topic.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/mqtt/Topic.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/hardware/motors.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/hardware/motors.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/hardware/sonar.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/hardware/sonar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/network/mqtt.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/network/mqtt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/python.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +224,7 @@
       <workItem from="1655728996346" duration="452000" />
       <workItem from="1655729471405" duration="8328000" />
       <workItem from="1656067472914" duration="10831000" />
-      <workItem from="1656413962749" duration="7850000" />
+      <workItem from="1656413962749" duration="13322000" />
     </task>
     <servers />
   </component>
@@ -257,6 +245,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python$mag.coverage" NAME="mag Coverage Results" MODIFIED="1656265331911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/python$led.coverage" NAME="led Coverage Results" MODIFIED="1656416383413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/hardware" />
-    <SUITE FILE_PATH="coverage/python$main.coverage" NAME="main Coverage Results" MODIFIED="1656419752151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python$main.coverage" NAME="main Coverage Results" MODIFIED="1656446045051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -29,7 +29,7 @@ def on_message(self, userdata, msg):
     print(cmd)
     # pygame.mouse.set_pos((random.choice(range(600)), random.choice(range(600))))
 
-    if cmd == "ack":
+    if cmd == "ACK":
         threading.Thread(target=led.blink, args=(led.GREEN, 5, .2)).start()
 
     if cmd == "STOP":

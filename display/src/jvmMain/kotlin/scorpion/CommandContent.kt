@@ -7,8 +7,10 @@ import androidx.compose.runtime.remember
 fun CommandContent() {
 
     val commandVM = remember { CommandVM() }
-    val state = commandVM.state
 
-    MainScreen(state.list, commandVM::update)
+    val state = commandVM.state
+    val sonar = commandVM.sonar
+
+    MainScreen(state.list, sonar, commandVM::update)
 
 }

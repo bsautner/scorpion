@@ -15,12 +15,8 @@ import scorpion.*
 @Preview
 fun App() {
 
-
-
     MaterialTheme {
-//        RootContent()
         CommandContent()
-
     }
 }
 

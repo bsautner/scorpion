@@ -4,13 +4,11 @@ import Wander
 import com.example.myapp.transcribestreaming.Transcribe
 import com.google.gson.Gson
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import mqtt.MQTT
 import mqtt.MqttListener
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken
 import org.eclipse.paho.client.mqttv3.MqttMessage
-import scorpion.device.Sonar
 import scorpion.mqtt.Command
 import scorpion.mqtt.Topic
 import scorpion.transcribestreaming.VoiceCommandListener
@@ -19,7 +17,7 @@ class Program : MqttListener, VoiceCommandListener {
 
     private val broker =  "tcp://scorpion:1883"
     private val mqtt : MQTT = MQTT(this, broker)
-    private val wander: Wander = Wander(mqtt)
+//    private val wander: Wander = Wander(mqtt)
 
 
     suspend fun start() {
@@ -29,8 +27,10 @@ class Program : MqttListener, VoiceCommandListener {
 
     override fun onConnected() {
         println("MQTT Connected")
-        mqtt.subscribe("sonar")
-        mqtt.subscribe("MAG")
+        Topic.values().forEach {
+            mqtt.subscribe(it.name)
+        }
+
 
         DisplayScope.launch {
             Transcribe(this@Program).start()
@@ -45,12 +45,12 @@ class Program : MqttListener, VoiceCommandListener {
 
     override fun messageArrived(topic: String?, message: MqttMessage?) {
         val m = message?.payload?.let { String(it) } ?: ""
-//         println("$topic $m")
+//        println("$topic $m")
         val t = topic?.let { Topic.valueOf(it) }
 
         t?.let {
             if (t == Topic.SONAR) {
-                Sonar.feed(message?.let { String(it.payload) }.toString())
+//                S.feed(message?.let { String(it.payload) }.toString())
             }
 
             if (t == Topic.MAG) {
@@ -95,7 +95,7 @@ class Program : MqttListener, VoiceCommandListener {
             job?.cancel()
 
                 job = DisplayScope.launch {
-                    wander.start()
+//                    wander.start()
                 }
 
         }
