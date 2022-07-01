@@ -26,7 +26,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(self, userdata, msg):
 
     cmd = bytes(msg.payload).decode()
-    print(cmd)
+    # print(cmd)
     # pygame.mouse.set_pos((random.choice(range(600)), random.choice(range(600))))
 
     if cmd == "ACK":

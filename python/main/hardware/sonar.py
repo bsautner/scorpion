@@ -42,6 +42,7 @@ def sonar_run(mqtt):
 
             srs = Sonar(dist[0], dist[1], dist[2], dist[3])
             payload = json.dumps(srs.__dict__)
+            # print(payload)
             mqtt.publish(topic=topic, payload=payload)
 
         except RuntimeError:

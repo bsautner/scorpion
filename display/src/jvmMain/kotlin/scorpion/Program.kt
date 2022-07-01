@@ -3,21 +3,22 @@ package scorpion
 import Wander
 import com.example.myapp.transcribestreaming.Transcribe
 import com.google.gson.Gson
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import mqtt.MQTT
 import mqtt.MqttListener
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken
 import org.eclipse.paho.client.mqttv3.MqttMessage
+import scorpion.device.SonarData
 import scorpion.mqtt.Command
 import scorpion.mqtt.Topic
 import scorpion.transcribestreaming.VoiceCommandListener
+import kotlin.math.atan2
 
 class Program : MqttListener, VoiceCommandListener {
 
     private val broker =  "tcp://scorpion:1883"
     private val mqtt : MQTT = MQTT(this, broker)
-//    private val wander: Wander = Wander(mqtt)
+     private val wander: Wander = Wander(mqtt)
 
 
     suspend fun start() {
@@ -32,9 +33,9 @@ class Program : MqttListener, VoiceCommandListener {
         }
 
 
-        DisplayScope.launch {
-            Transcribe(this@Program).start()
-        }
+//        DisplayScope.launch {
+//            Transcribe(this@Program).start()
+//        }
 
     }
 
@@ -43,38 +44,77 @@ class Program : MqttListener, VoiceCommandListener {
 
     }
 
+    var explore : Job? = null
+
     override fun messageArrived(topic: String?, message: MqttMessage?) {
         val m = message?.payload?.let { String(it) } ?: ""
-//        println("$topic $m")
-        val t = topic?.let { Topic.valueOf(it) }
 
-        t?.let {
-            if (t == Topic.SONAR) {
-//                S.feed(message?.let { String(it.payload) }.toString())
-            }
+        val top = topic?.let { Topic.valueOf(it) }
 
-            if (t == Topic.MAG) {
-                message?.let {
-                    val p = String(it.payload)
-                    val vals = Gson().fromJson(p, Array<Double>::class.java)
+        top?.let {
+            when (it) {
+                Topic.COMMAND -> {
+                    println("Command Recieved: ${m}")
+                    val cmd = m.let { Command.valueOf(m) }
+                    cmd.let { command ->
+                        when (command) {
+                            Command.STOP -> {
+
+
+
+                            }
+                            Command.LEFT -> {}
+                            Command.RIGHT -> {}
+                            Command.FORWARD -> {}
+                            Command.REVERSE -> {}
+                            Command.ACK -> {}
+                            Command.EXPLORE -> {
+                                println("exploring!")
+                                wander.enabled = ! wander.enabled
+
+                                if (wander.enabled) {
+                                    explore = DisplayScope.launch {
+                                        wander.explore()
+                                    }
+                                } else {
+                                    explore?.cancelChildren()
+                                }
+
+                            }
+                        }
+                    }
+
+                }
+                Topic.VOICE -> {
+
+                }
+                Topic.MAG -> {
+
+                    val vals = Gson().fromJson(m, Array<Double>::class.java)
 
                     val x = vals[0]
                     val y = vals[1]
                     val z = vals[2]
-                    var heading  =  kotlin.math.atan2(y, x) * 180 / Math.PI
+                    var heading  =  atan2(y, x) * 180 / Math.PI
 
+                }
+                Topic.SONAR -> {
 
-                    println(heading)
+                    val sonarData = SonarData.fromJson(m)
+                    wander.update(sonarData)
 
 
                 }
-            }
+                Topic.GPS -> {
 
+                    val splt = m.split(",")
+                    println(splt[8])
+
+                }
+            }
         }
 
 
-
-//
 
     }
 

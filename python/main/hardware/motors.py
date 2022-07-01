@@ -3,14 +3,14 @@ import RPi.GPIO as GPIO
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-pin_motor_1_a = 23  # GPIO12
-pin_motor_1_b = 18  # GPIO16
-pin_motor_2_a = 25  # GPIO18
-pin_motor_2_b = 24  # GPIO25
+pin_motor_2_a = 18  # GPIO12
+pin_motor_2_b = 23  # GPIO16
+pin_motor_4_a = 24  # GPIO18
+pin_motor_4_b = 25  # GPIO25
 pin_motor_3_a = 16  # GPIO36
 pin_motor_3_b = 12  # GPIO32
-pin_motor_4_a = 21  # GPOIO38
-pin_motor_4_b = 20  # GPIO40
+pin_motor_1_a = 21  # GPOIO38
+pin_motor_1_b = 20  # GPIO40
 
 GPIO.setup(pin_motor_1_a, GPIO.OUT)
 GPIO.setup(pin_motor_1_b, GPIO.OUT)
@@ -60,32 +60,32 @@ def stop():
 def forward():
 
         stop()
-        motor_a[1].ChangeDutyCycle(max)
-        motor_b[1].ChangeDutyCycle(max)
+        motor_a[0].ChangeDutyCycle(max)
+        motor_b[0].ChangeDutyCycle(max)
         motor_c[0].ChangeDutyCycle(max)
         motor_d[0].ChangeDutyCycle(max)
 
 def reverse():
 
         stop()
-        motor_a[0].ChangeDutyCycle(max)
-        motor_b[0].ChangeDutyCycle(max)
+        motor_a[1].ChangeDutyCycle(max)
+        motor_b[1].ChangeDutyCycle(max)
         motor_c[1].ChangeDutyCycle(max)
         motor_d[1].ChangeDutyCycle(max)
 
 
 def right():
         stop()
-        motor_a[1].ChangeDutyCycle(max-20)
-        motor_b[0].ChangeDutyCycle(max-20)
-        motor_c[1].ChangeDutyCycle(max-20)
-        motor_d[0].ChangeDutyCycle(max-20)
-
-def left():
-        stop()
         motor_a[0].ChangeDutyCycle(max-20)
         motor_b[1].ChangeDutyCycle(max-20)
         motor_c[0].ChangeDutyCycle(max-20)
         motor_d[1].ChangeDutyCycle(max-20)
+
+def left():
+        stop()
+        motor_a[1].ChangeDutyCycle(max-20)
+        motor_b[0].ChangeDutyCycle(max-20)
+        motor_c[1].ChangeDutyCycle(max-20)
+        motor_d[0].ChangeDutyCycle(max-20)
 
 

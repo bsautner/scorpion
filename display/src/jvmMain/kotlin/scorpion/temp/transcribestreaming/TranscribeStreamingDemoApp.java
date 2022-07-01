@@ -105,7 +105,7 @@ public class TranscribeStreamingDemoApp {
                     List<Result> results = ((TranscriptEvent) event).transcript().results();
                     if (results.size() > 0) {
                         if (!results.get(0).alternatives().get(0).transcript().isEmpty()) {
-                            System.out.println(results.get(0).alternatives().get(0).transcript());
+ //                           System.out.println(results.get(0).alternatives().get(0).transcript());
 //                            System.out.println(results.get(0).isPartial());
 //                            System.out.println(results.get(0).alternatives().size());
 //                            Polly.speak(results.get(0).alternatives().get(0).transcript());

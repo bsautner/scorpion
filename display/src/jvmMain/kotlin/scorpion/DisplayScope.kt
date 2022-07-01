@@ -10,5 +10,5 @@ object DisplayScope : CoroutineScope {
     private val job = SupervisorJob()
 
     override val coroutineContext: CoroutineContext
-        get() = Dispatchers.Default + job
+        get() = Dispatchers.IO + job
 }

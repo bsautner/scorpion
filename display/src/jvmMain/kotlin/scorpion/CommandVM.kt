@@ -9,13 +9,14 @@ import mqtt.MQTT
 import mqtt.MqttListener
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken
 import org.eclipse.paho.client.mqttv3.MqttMessage
-import scorpion.device.Sonar
+import scorpion.device.SonarData
+import scorpion.mqtt.Command
 import scorpion.mqtt.Topic
 
 class CommandVM : MqttListener {
     private val broker =  "tcp://scorpion:1883"
     private val mqtt : MQTT = MQTT(this, broker)
-    val queue = ArrayDeque<String>()
+
     init {
         DisplayScope.launch {
             mqtt.start()
@@ -23,43 +24,46 @@ class CommandVM : MqttListener {
 
     }
 
+    fun onCommand(command: Command) {
+        mqtt.publish(Topic.COMMAND, command)
+    }
+
     fun update() {
-        println("update clicked")
         val store = mutableListOf<String>()
         store.addAll(state.list)
 
         store.add(System.currentTimeMillis().toString())
 
         setState { Data(store) }
-        setSonar { Sonar(500.0, 500.0, 500.0, 500.0) }
+        setSonar { SonarData(500.0, 500.0, 500.0, 500.0) }
 
     }
 
     var state: Data by mutableStateOf(initialState())
         private set
 
-    var sonar: Sonar by mutableStateOf(initSonar())
+    var sonarData: SonarData by mutableStateOf(initSonar())
         private set
 
 
 
     private fun initialState(): Data {
-        val store = mutableListOf<String>()
+        val store = mutableListOf<String>("foo")
 
 
         return Data(store)
     }
 
-    private fun initSonar(): Sonar {
-        return Sonar(0.0, 0.0, 0.0, 0.0)
+    private fun initSonar(): SonarData {
+        return SonarData(0.0, 0.0, 0.0, 0.0)
     }
 
     private inline fun setState(update: Data.() -> Data) {
         state = state.update()
     }
 
-    private inline fun setSonar(update: Sonar.() -> Sonar) {
-        sonar = sonar.update()
+    private inline fun setSonar(update: SonarData.() -> SonarData) {
+        sonarData = sonarData.update()
     }
 
 
@@ -92,10 +96,9 @@ class CommandVM : MqttListener {
                 setState { Data(store) }
             }
             Topic.SONAR.name -> {
-                val f1 = m.trimStart('\"').trimEnd('\"').replace("\\", "")
-                val v  = Gson().fromJson(f1, Sonar::class.java)
-                println(v.f)
-                setSonar { v }
+
+
+                setSonar { SonarData.fromJson(m) }
 
             }
         }
