@@ -45,6 +45,8 @@ class CommandVM : MqttListener {
     var sonarData: SonarData by mutableStateOf(initSonar())
         private set
 
+    var compass: Double by mutableStateOf(0.0)
+
 
 
     private fun initialState(): Data {
@@ -66,6 +68,9 @@ class CommandVM : MqttListener {
         sonarData = sonarData.update()
     }
 
+    private inline fun setCompass(update: Double.() -> Double) {
+        compass = compass.update()
+    }
 
     data class Data(val list: MutableList<String>)
 
@@ -100,6 +105,10 @@ class CommandVM : MqttListener {
 
                 setSonar { SonarData.fromJson(m) }
 
+            }
+
+            Topic.MAG.name -> {
+                setCompass {m.toDouble()}
             }
         }
 

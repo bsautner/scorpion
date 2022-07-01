@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b87618-bc6f-4c43-a34b-11a8bec05adc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hardware/Serial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hardware/calib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hardware/gps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hardware/mag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/hardware/plot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/location/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/location/mag_303.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/location/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../display/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../display/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/CommandContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/CommandContent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/CommandVM.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/CommandVM.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/DisplayScope.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/DisplayScope.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/MainScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/MainScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/Program.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/Program.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/device/Sonar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/device/SonarData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/logic/Wander.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/logic/Wander.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/mqtt/Command.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/mqtt/Command.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/mqtt/Topic.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/mqtt/Topic.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/temp/transcribestreaming/TranscribeStreamingDemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/temp/transcribestreaming/TranscribeStreamingDemoApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/hardware/motors.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/hardware/motors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/hardware/sonar.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/hardware/sonar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/mag.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +250,7 @@
       <workItem from="1656601595808" duration="4058000" />
       <workItem from="1656613931653" duration="7414000" />
       <workItem from="1656675959014" duration="5202000" />
-      <workItem from="1656682714084" duration="4004000" />
+      <workItem from="1656682714084" duration="4694000" />
     </task>
     <servers />
   </component>

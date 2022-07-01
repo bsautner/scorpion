@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fe6e0e-d417-4d71-9c2a-a2fdfc3f4113" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../python/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/main/hardware/Serial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/main/hardware/calib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/main/hardware/gps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/main/hardware/mag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/main/hardware/plot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/main/location/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/main/location/mag_303.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python/main/location/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandContent.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandVM.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandVM.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/DisplayScope.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/DisplayScope.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Program.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Program.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/device/Sonar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/device/SonarData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/logic/Wander.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/logic/Wander.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/Command.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/Command.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/Topic.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/Topic.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/transcribestreaming/TranscribeStreamingDemoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp/transcribestreaming/TranscribeStreamingDemoApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/main/hardware/motors.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/hardware/motors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/main/hardware/sonar.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/hardware/sonar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/main/mag.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +208,7 @@
       <workItem from="1656601569586" duration="2790000" />
       <workItem from="1656613931111" duration="1224000" />
       <workItem from="1656675945196" duration="1635000" />
-      <workItem from="1656682690006" duration="623000" />
+      <workItem from="1656682690006" duration="1449000" />
     </task>
     <servers />
   </component>
@@ -256,11 +236,6 @@
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandVM.kt</url>
-          <line>99</line>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

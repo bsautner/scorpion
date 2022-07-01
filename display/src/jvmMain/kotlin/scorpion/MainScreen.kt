@@ -25,103 +25,127 @@ fun DistanceText(text: String) {
 
 
 @Composable
-fun MainScreen(update: MutableList<String>, sonarData: SonarData, onSimClick: () -> Unit, onCommand: (Command) -> Unit) {
+fun MainScreen(
+    update: MutableList<String>,
+    sonarData: SonarData,
+    compass: Double,
+    onSimClick: () -> Unit,
+    onCommand: (Command) -> Unit
+) {
 
 
     Row(modifier = Modifier.defaultMinSize(1024.dp, 768.dp)) {
 
-       Column(modifier = Modifier.width(800.dp)) {
-           Row {
+        Column(modifier = Modifier.width(800.dp)) {
+            Row {
 
 
-               Button(onClick = {
+                Button(onClick = {
 
-                   onCommand.invoke(Command.EXPLORE)
-
-
-               }) {
-                   Text("SIM")
-               }
-
-               Button(onClick = {
-
-                   onCommand.invoke(Command.FORWARD)
+                    onCommand.invoke(Command.EXPLORE)
 
 
-               }) {
-                   Text("F")
-               }
+                }) {
+                    Text("SIM")
+                }
 
-               Button(onClick = {
+                Button(onClick = {
 
-                   onCommand.invoke(Command.STOP)
-
-
-               }) {
-                   Text("S")
-               }
-
-               Button(onClick = {
-
-                   onCommand.invoke(Command.REVERSE)
+                    onCommand.invoke(Command.FORWARD)
 
 
-               }) {
-                   Text("REV")
-               }
-               Button(onClick = {
+                }) {
+                    Text("F")
+                }
 
-                   onCommand.invoke(Command.RIGHT)
+                Button(onClick = {
 
-
-               }) {
-                   Text("R")
-               }
-               Button(onClick = {
-
-                   onCommand.invoke(Command.LEFT)
+                    onCommand.invoke(Command.STOP)
 
 
-               }) {
-                   Text("L")
-               }
+                }) {
+                    Text("S")
+                }
+
+                Button(onClick = {
+
+                    onCommand.invoke(Command.REVERSE)
 
 
+                }) {
+                    Text("REV")
+                }
+                Button(onClick = {
 
-           }
-           Row {
-               DistanceText(sonarData.f.roundToInt().toString())
-               DistanceText(sonarData.l.roundToInt().toString())
-               DistanceText(sonarData.r.roundToInt().toString())
-               DistanceText(sonarData.d.roundToInt().toString())
-           }
-           Row {
-               Canvas(modifier = Modifier.width(800.dp).height(800.dp)) {
-
-                   val color : Color = if (sonarData.isClear()) {
-                       Color.Blue
-                   } else {
-                       Color.Red
-                   }
+                    onCommand.invoke(Command.RIGHT)
 
 
-                   drawCircle(color = color, radius = 10f, center = center)
-                   rotate(0F, center) {
-                       drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonarData.f +20) * -1).roundToInt()))))
-                   }
-                   rotate(45F, center) {
-                       drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonarData.r +20) * -1).roundToInt()))))
-                   }
-                   rotate(-45F, center) {
-                       drawLine(color = Color.Blue, start = this.center, end = this.center.plus(IntOffset(0, (((sonarData.l +20) * -1).roundToInt()))))
-                   }
+                }) {
+                    Text("R")
+                }
+                Button(onClick = {
 
-                   rotate(90F, center) {
-                       drawLine(color = Color.Black, start = this.center.plus(Offset(-100f, ((sonarData.d * -1).toFloat()))), end = this.center.plus(Offset(-100f, +((sonarData.d).toFloat()))))
-                   }
-               }
-           }
-       }
+                    onCommand.invoke(Command.LEFT)
+
+
+                }) {
+                    Text("L")
+                }
+
+
+            }
+            Row {
+                DistanceText(sonarData.f.roundToInt().toString())
+                DistanceText(sonarData.l.roundToInt().toString())
+                DistanceText(sonarData.r.roundToInt().toString())
+                DistanceText(sonarData.d.roundToInt().toString())
+            }
+            Row {
+                Canvas(modifier = Modifier.width(800.dp).height(800.dp)) {
+
+                    val color: Color = if (sonarData.isClear()) {
+                        Color.Blue
+                    } else {
+                        Color.Red
+                    }
+
+                    rotate(compass.toFloat(), center) {
+
+
+                        drawCircle(color = color, radius = 10f, center = center)
+                        rotate(0F, center) {
+                            drawLine(
+                                color = Color.Blue,
+                                start = this.center,
+                                end = this.center.plus(IntOffset(0, (((sonarData.f + 20) * -1).roundToInt())))
+                            )
+                        }
+                        rotate(45F, center) {
+                            drawLine(
+                                color = Color.Blue,
+                                start = this.center,
+                                end = this.center.plus(IntOffset(0, (((sonarData.r + 20) * -1).roundToInt())))
+                            )
+                        }
+                        rotate(-45F, center) {
+                            drawLine(
+                                color = Color.Blue,
+                                start = this.center,
+                                end = this.center.plus(IntOffset(0, (((sonarData.l + 20) * -1).roundToInt())))
+                            )
+                        }
+
+                        rotate(90F, center) {
+                            drawLine(
+                                color = Color.Black,
+                                start = this.center.plus(Offset(-100f, ((sonarData.d * -1).toFloat()))),
+                                end = this.center.plus(Offset(-100f, +((sonarData.d).toFloat())))
+                            )
+                        }
+                    }
+                }
+            }
+        }
 
         Column {
 
@@ -134,7 +158,6 @@ fun MainScreen(update: MutableList<String>, sonarData: SonarData, onSimClick: ()
 
     }
 }
-
 
 
 @Composable

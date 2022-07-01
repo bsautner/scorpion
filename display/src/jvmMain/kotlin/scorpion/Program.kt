@@ -90,12 +90,9 @@ class Program : MqttListener, VoiceCommandListener {
                 }
                 Topic.MAG -> {
 
-                    val vals = Gson().fromJson(m, Array<Double>::class.java)
+                    val vals = m.toDouble()
+                    println(vals)
 
-                    val x = vals[0]
-                    val y = vals[1]
-                    val z = vals[2]
-                    var heading  =  atan2(y, x) * 180 / Math.PI
 
                 }
                 Topic.SONAR -> {
