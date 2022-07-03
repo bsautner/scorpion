@@ -1,4 +1,5 @@
 cd ~/scorpion
+git fetch
 git pull
 cd display
 ./gradlew assemble shadowJar
