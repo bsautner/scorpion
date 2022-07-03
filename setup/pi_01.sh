@@ -21,6 +21,16 @@ sudo systemctl restart mosquitto
 sudo systemctl status mosquitto
 sudo apt install -y mosquitto-clients
 
+sudo apt-get install -y python-smbus
+sudo apt-get install -y i2c-tools
+sudo apt-get install -y python3-pip
+
+sudo pip3 install --upgrade setuptools
+pip3 install adafruit-circuitpython-hcsr04
+cd ~
+sudo pip3 install --upgrade adafruit-python-shell
+wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
+sudo python3 raspi-blinka.py
 
 cd ~
 git clone https://github.com/bsautner/scorpion.git
