@@ -91,7 +91,7 @@ class Program : MqttListener, VoiceCommandListener {
                 Topic.MAG -> {
 
                     val vals = m.toDouble()
-                    println(vals)
+
 
 
                 }

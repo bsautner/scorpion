@@ -27,7 +27,7 @@ fun main() = application {
         Program().start()
     }
 
-    Window(state = WindowState(width = 1024.dp, height = 800.dp), onCloseRequest = ::exitApplication) {
+    Window(title = "test", state = WindowState(width = 1024.dp, height = 800.dp), onCloseRequest = ::exitApplication) {
         App()
     }
 }
