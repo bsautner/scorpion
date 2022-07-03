@@ -10,6 +10,7 @@ import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.application
 import kotlinx.coroutines.launch
 import scorpion.*
+import java.net.InetAddress
 
 @Composable
 @Preview
@@ -23,11 +24,13 @@ fun App() {
 fun main() = application {
 
 
+
     DisplayScope.launch {
         Program().start()
     }
+    val ip = (InetAddress.getLocalHost().hostAddress)
 
-    Window(title = "test", state = WindowState(width = 1024.dp, height = 800.dp), onCloseRequest = ::exitApplication) {
+    Window(title = "$ip", state = WindowState(width = 1024.dp, height = 800.dp), onCloseRequest = ::exitApplication) {
         App()
     }
 }
