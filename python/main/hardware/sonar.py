@@ -26,25 +26,38 @@ class Sonar:
 def sonar_run(mqtt):
     print("Started Sonar Thread...")
     while True:
+
         try:
-
             dist[0] = front_sonar.distance
-            time.sleep(.1)
-
-            dist[1] = left_front_sonar.distance
-            time.sleep(.1)
-
-            dist[2] = right_front_sonar.distance
-            time.sleep(.1)
-
-            dist[3] = down_front_sonar.distance
-            time.sleep(.1)
-
-            srs = Sonar(dist[0], dist[1], dist[2], dist[3])
-            payload = json.dumps(srs.__dict__)
-            # print(payload)
-            mqtt.publish(topic=topic, payload=payload)
-
+            time.sleep(.25)
         except RuntimeError:
-            print("Retrying Sonar...")
+            time.sleep(.25)
+            print("front_sonar failed")
+
+        try:
+            dist[1] = left_front_sonar.distance
+            time.sleep(.25)
+        except RuntimeError:
+            time.sleep(.25)
+            print("left_front_sonar failed")
+
+        # try:
+        #     dist[2] = right_front_sonar.distance
+        #     time.sleep(.25)
+        # except RuntimeError:
+        #     time.sleep(.25)
+        #     print("right_front_sonar failed")
+
+        try:
+            dist[3] = down_front_sonar.distance
+            time.sleep(.25)
+        except RuntimeError:
+            time.sleep(.25)
+            print("down_front_sonar failed")
+
+        srs = Sonar(dist[0], dist[1], dist[2], dist[3])
+        payload = json.dumps(srs.__dict__)
+        print(payload)
+        mqtt.publish(topic=topic, payload=payload)
+
 

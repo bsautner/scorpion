@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00fe6e0e-d417-4d71-9c2a-a2fdfc3f4113" name="Changes" comment="" />
+    <list default="true" id="00fe6e0e-d417-4d71-9c2a-a2fdfc3f4113" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/JavaSoundRecorder.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Test.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/voice/Transcribe.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/voice/TranscribeScope.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/Program.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/TranscribeScope.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/mqtt/Command.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/mqtt/MQTT.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/mqtt/MqttListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/mqtt/Payload.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/mqtt/Topic.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/transcribe/Transcribe.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Program.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Program.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/main/hardware/sonar.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/hardware/sonar.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,9 +74,9 @@
       <list>
         <option value="Kotlin File" />
         <option value="Kotlin Enum" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -86,8 +120,12 @@
       <recent name="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/temp" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="scorpion.voice" />
       <recent name="scorpion.mqtt" />
       <recent name="scorpion.transcribestreaming" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="scorpion.voice" />
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.MainKt">
@@ -99,6 +137,20 @@
           <option name="PATTERN" value="scorpion.temp.transcribestreaming.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaSoundRecorder" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="scorpion.JavaSoundRecorder" />
+      <module name="display.jvmMain" />
+      <shortenClasspath name="NONE" />
+      <option name="VM_PARAMETERS" value="-Xms12G -Xmx12G" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,6 +172,13 @@
         <option name="region" />
         <option name="useCurrentConnection" value="false" />
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="scorpion.Test" />
+      <module name="display.jvmMain" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,12 +222,16 @@
     <list>
       <item itemvalue="Application.TranscribeStreamingDemoApp" />
       <item itemvalue="Embedded Linux JVM.10.0.0.168" />
+      <item itemvalue="Kotlin.JavaSoundRecorder" />
+      <item itemvalue="Kotlin.Test" />
       <item itemvalue="Kotlin.MainKt (1)" />
       <item itemvalue="Kotlin.MainKt" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Kotlin.JavaSoundRecorder" />
+        <item itemvalue="Kotlin.Test" />
         <item itemvalue="Kotlin.MainKt (1)" />
         <item itemvalue="Application.TranscribeStreamingDemoApp" />
       </list>
@@ -201,7 +264,8 @@
       <workItem from="1656601569586" duration="2790000" />
       <workItem from="1656613931111" duration="1224000" />
       <workItem from="1656675945196" duration="1635000" />
-      <workItem from="1656682690006" duration="5074000" />
+      <workItem from="1656682690006" duration="6391000" />
+      <workItem from="1656846335600" duration="12800000" />
     </task>
     <servers />
   </component>

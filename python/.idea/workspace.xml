@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b87618-bc6f-4c43-a34b-11a8bec05adc" name="Changes" comment="" />
+    <list default="true" id="25b87618-bc6f-4c43-a34b-11a8bec05adc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/JavaSoundRecorder.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/Test.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/voice/Transcribe.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/voice/TranscribeScope.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/Program.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/TranscribeScope.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/mqtt/Command.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/mqtt/MQTT.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/mqtt/MqttListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/mqtt/Payload.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/mqtt/Topic.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../transcribe_service/transcribe_service/src/main/kotlin/scorpion/transcribe/Transcribe.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../display/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../display/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/MainScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/MainScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/Program.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../display/src/jvmMain/kotlin/scorpion/Program.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/hardware/sonar.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/hardware/sonar.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +82,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "jbr-11",
-    "last_opened_file_path": "/home/ben/scorpion/python/main/location",
+    "last_opened_file_path": "/home/ben/code/sphinx4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -95,6 +129,33 @@
         <option name="useCurrentConnection" value="false" />
       </EXTENSION>
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/hardware/gps.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="led" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://ben@scorp:22/usr/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/hardware" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/hardware/led.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,33 +218,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mag_303" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="sftp://ben@sting:22/usr/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/hardware" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
-        <option name="credential" />
-        <option name="region" />
-        <option name="useCurrentConnection" value="false" />
-      </EXTENSION>
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/location/mag_303.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -212,19 +246,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.led" />
       <item itemvalue="Python.gps" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.location services" />
-      <item itemvalue="Python.mag_303" />
       <item itemvalue="Python.mag" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.gps" />
         <item itemvalue="Python.location services" />
+        <item itemvalue="Python.led" />
+        <item itemvalue="Python.gps" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.mag_303" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +283,8 @@
       <workItem from="1656601595808" duration="4058000" />
       <workItem from="1656613931653" duration="7414000" />
       <workItem from="1656675959014" duration="5202000" />
-      <workItem from="1656682714084" duration="8520000" />
+      <workItem from="1656682714084" duration="9284000" />
+      <workItem from="1656846394585" duration="2848000" />
     </task>
     <servers />
   </component>
@@ -268,14 +303,14 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/python$location_services.coverage" NAME="location services Coverage Results" MODIFIED="1656694931962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/location" />
+    <SUITE FILE_PATH="coverage/python$location_services.coverage" NAME="location services Coverage Results" MODIFIED="1656847420721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/location" />
     <SUITE FILE_PATH="coverage/python$gps.coverage" NAME="gps Coverage Results" MODIFIED="1656760305156" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/hardware" />
     <SUITE FILE_PATH="coverage/python$mag_303.coverage" NAME="mag_303 Coverage Results" MODIFIED="1656691628924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/hardware" />
     <SUITE FILE_PATH="coverage/python$mag.coverage" NAME="mag Coverage Results" MODIFIED="1656681586230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/hardware" />
     <SUITE FILE_PATH="coverage/python$calib.coverage" NAME="calib Coverage Results" MODIFIED="1656673219734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/hardware" />
-    <SUITE FILE_PATH="coverage/python$led.coverage" NAME="led Coverage Results" MODIFIED="1656416383413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/hardware" />
     <SUITE FILE_PATH="coverage/python$Serial.coverage" NAME="Serial Coverage Results" MODIFIED="1656603451641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/hardware" />
-    <SUITE FILE_PATH="coverage/python$main.coverage" NAME="main Coverage Results" MODIFIED="1656765868834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/python$led.coverage" NAME="led Coverage Results" MODIFIED="1656846408193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/hardware" />
+    <SUITE FILE_PATH="coverage/python$main.coverage" NAME="main Coverage Results" MODIFIED="1656930196750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/python$lms.coverage" NAME="lms Coverage Results" MODIFIED="1656613993508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
   </component>
 </project>

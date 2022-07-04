@@ -30,6 +30,11 @@ kotlin {
             dependencies {
                 implementation(compose.desktop.currentOs)
 
+                implementation("net.java.dev.jna:jna:5.7.0")
+                implementation("com.alphacephei:vosk:0.3.38")
+                implementation("com.google.code.gson:gson:2.8.9")
+                implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
+                implementation("androidx.compose.ui:ui-tooling:1.0.1")
                 // https://mvnrepository.com/artifact/software.amazon.awssdk/polly
                 implementation("software.amazon.awssdk:polly:2.17.209")
 // https://mvnrepository.com/artifact/javazoom/jlayer
@@ -45,8 +50,7 @@ kotlin {
 
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2-native-mt")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-javafx:1.6.2")
-                implementation("com.google.code.gson:gson:2.8.9")
-                implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
+
                 // https://mvnrepository.com/artifact/androidx.compose.ui/ui-geometry
 //                implementation("androidx.compose.ui:ui-geometry:1.1.1")
 

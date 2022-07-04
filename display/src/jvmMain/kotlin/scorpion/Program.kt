@@ -12,6 +12,7 @@ import scorpion.device.SonarData
 import scorpion.mqtt.Command
 import scorpion.mqtt.Topic
 import scorpion.transcribestreaming.VoiceCommandListener
+import scorpion.voice.TranscribeScope
 import kotlin.math.atan2
 
 class Program : MqttListener, VoiceCommandListener {
@@ -20,6 +21,7 @@ class Program : MqttListener, VoiceCommandListener {
     private val mqtt : MQTT = MQTT(this, broker)
      private val wander: Wander = Wander(mqtt)
 
+    private val transcribe = scorpion.voice.Transcribe(mqtt)
 
     suspend fun start() {
         mqtt.start()
@@ -30,6 +32,10 @@ class Program : MqttListener, VoiceCommandListener {
         println("MQTT Connected")
         Topic.values().forEach {
             mqtt.subscribe(it.name)
+        }
+
+        TranscribeScope.launch {
+            transcribe.start()
         }
 
 
