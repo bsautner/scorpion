@@ -34,9 +34,9 @@ class Program : MqttListener, VoiceCommandListener {
             mqtt.subscribe(it.name)
         }
 
-        TranscribeScope.launch {
-            transcribe.start()
-        }
+//        TranscribeScope.launch {
+//            transcribe.start()
+//        }
 
 
 //        DisplayScope.launch {

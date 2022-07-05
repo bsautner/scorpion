@@ -12,6 +12,6 @@ fun CommandContent() {
     val sonar = commandVM.sonarData
     val compass = commandVM.compass
 
-    MainScreen(state.list, sonar, compass, commandVM::update, commandVM::onCommand)
+    MainScreen3(state.list, sonar, compass, commandVM::onCommand)
 
 }

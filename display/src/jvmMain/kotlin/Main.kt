@@ -28,9 +28,9 @@ fun main() = application {
     DisplayScope.launch {
         Program().start()
     }
-    val ip = (String(InetAddress.getLocalHost().address))
 
-    Window(title = "$ip", state = WindowState(width = 1024.dp, height = 800.dp), onCloseRequest = ::exitApplication) {
+
+    Window(title = "Scorpion", state = WindowState(width = 1024.dp, height = 800.dp), onCloseRequest = ::exitApplication) {
         App()
     }
 }
