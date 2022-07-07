@@ -17,6 +17,7 @@ sudo systemctl restart mosquitto
 sudo systemctl status mosquitto
 sudo apt install -y mosquitto-clients
 
+sudo apt-get install libportaudio2
 
 
 sudo apt-get install -y python-smbus
