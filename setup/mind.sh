@@ -17,7 +17,21 @@ sudo systemctl restart mosquitto
 sudo systemctl status mosquitto
 sudo apt install -y mosquitto-clients
 
+sudo apt-get install libportaudio2
 
 
 sudo apt-get install -y python-smbus
 sudo apt-get install -y python3-pip
+
+
+wget https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip
+unzip ./vosk-model-small-en-us-0.15.zip
+
+sudo pip3 install --upgrade setuptools
+pip3 install sounddevice
+pip3 install vosk
+pip3 install flask
+pip3 install numpy 
+pip3 install opencv-contrib-python
+pip3 install imutils
+pip3 install opencv-python
