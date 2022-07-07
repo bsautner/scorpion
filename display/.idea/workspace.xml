@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00fe6e0e-d417-4d71-9c2a-a2fdfc3f4113" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../python/main/hardware/lidar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandContent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandVM.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandVM.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/MainScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Program.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Program.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/Program.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/device/SonarData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/device/SonarData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/Topic.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/mqtt/Topic.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python/main/location/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python/main/location/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +60,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.runtime/runtime-desktop/1.1.1/904e887849338d189842bd9f50c6426e23b95481/runtime-desktop-1.1.1-sources.jar!/commonMain/androidx/compose/runtime/SnapshotState.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-graphics-desktop/1.1.1/aa27b7816317c0c18356fd8af33aa56b1ca37703/ui-graphics-desktop-1.1.1-sources.jar!/commonMain/androidx/compose/ui/graphics/drawscope/DrawScope.kt" root0="SKIP_INSPECTION" />
   </component>
   <component name="KotlinMultiplatform" KONAN_HOME="$USER_HOME$/.konan/kotlin-native-prebuilt-linux-x86_64-1.6.10" />
   <component name="MarkdownSettingsMigration">
@@ -238,7 +247,8 @@
       <workItem from="1656613931111" duration="1224000" />
       <workItem from="1656675945196" duration="1635000" />
       <workItem from="1656682690006" duration="6391000" />
-      <workItem from="1656846335600" duration="19539000" />
+      <workItem from="1656846335600" duration="38345000" />
+      <workItem from="1657190048445" duration="49000" />
     </task>
     <servers />
   </component>
@@ -255,19 +265,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/jvmMain/kotlin/scorpion/CommandVM.kt</url>
-          <line>36</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

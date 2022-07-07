@@ -25,11 +25,6 @@ fun main() = application {
 
 
 
-    DisplayScope.launch {
-        Program().start()
-    }
-
-
     Window(title = "Scorpion", state = WindowState(width = 1024.dp, height = 800.dp), onCloseRequest = ::exitApplication) {
         App()
     }

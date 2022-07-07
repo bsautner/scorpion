@@ -2,7 +2,7 @@ package scorpion.mqtt
 
 enum class Topic {
 
-    COMMAND, VOICE, MAG, SONAR, GPS
+    COMMAND, VOICE, MAG, SONAR, GPS, LIDAR
 
 
 

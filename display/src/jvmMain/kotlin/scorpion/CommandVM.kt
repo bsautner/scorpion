@@ -4,6 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.google.gson.Gson
+import com.google.gson.JsonArray
 import kotlinx.coroutines.launch
 import mqtt.MQTT
 import mqtt.MqttListener
@@ -14,7 +15,7 @@ import scorpion.mqtt.Command
 import scorpion.mqtt.Topic
 
 class CommandVM : MqttListener {
-    private val broker =  "tcp://scorpion:1883"
+    private val broker =  "tcp://10.0.0.79:1883"
     private val mqtt : MQTT = MQTT(this, broker)
 
     init {
@@ -28,16 +29,6 @@ class CommandVM : MqttListener {
         mqtt.publish(Topic.COMMAND, command)
     }
 
-    fun update() {
-        val store = mutableListOf<String>()
-        store.addAll(state.list)
-
-        store.add(System.currentTimeMillis().toString())
-
-        setState { Data(store) }
-        setSonar { SonarData(500.0, 500.0, 500.0, 500.0) }
-
-    }
 
     var state: Data by mutableStateOf(initialState())
         private set
@@ -47,6 +38,9 @@ class CommandVM : MqttListener {
 
     var compass: Double by mutableStateOf(0.0)
 
+    var lidar: JsonArray by mutableStateOf(initLidar())
+
+    var status: String by mutableStateOf("")
 
 
     private fun initialState(): Data {
@@ -60,6 +54,10 @@ class CommandVM : MqttListener {
         return SonarData(0.0, 0.0, 0.0, 0.0)
     }
 
+    private fun initLidar(): JsonArray {
+
+        return JsonArray(1)
+    }
     private inline fun setState(update: Data.() -> Data) {
         state = state.update()
     }
@@ -70,6 +68,14 @@ class CommandVM : MqttListener {
 
     private inline fun setCompass(update: Double.() -> Double) {
         compass = compass.update()
+    }
+
+    private inline fun setLidar(update: JsonArray.() -> JsonArray) {
+        lidar = lidar.update()
+    }
+
+    private inline fun setStatus(update: String.() -> String) {
+        status = status.update()
     }
 
     data class Data(val list: MutableList<String>)
@@ -110,11 +116,35 @@ class CommandVM : MqttListener {
             Topic.MAG.name -> {
                 setCompass {m.toDouble()}
             }
+
+            Topic.LIDAR.name -> {
+                val data = Gson().fromJson(m, JsonArray::class.java)
+                setLidar { data }
+                if (isObstructed(data, compass)) {
+                    setStatus { "obstructed" }
+                }
+                else {
+                    setStatus { "clear" }
+                }
+
+            }
+        }
+    }
+
+    fun isObstructed(lidar: JsonArray, compass: Double) : Boolean {
+
+        if (! sonarData.isClear()) {
+            return false
+        }
+        lidar.forEach {
+                val arr = it.asJsonArray
+                if (arr[2].asInt < 200 && compass in arr[1].asDouble -10..arr[1].asDouble +10) {
+                    return true
+                }
+
         }
 
-
-
-
+        return false
     }
 
     override fun deliveryComplete(token: IMqttDeliveryToken?) {

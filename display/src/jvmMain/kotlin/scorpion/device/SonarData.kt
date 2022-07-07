@@ -6,6 +6,7 @@ data class SonarData(val f : Double, val l: Double, val r: Double, val d: Double
 
 
 
+
     fun isClear() : Boolean {
         if (f > distance ) {
               return true

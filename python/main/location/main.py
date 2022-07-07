@@ -4,6 +4,7 @@ import time
 
 import network.mqtt as mqtt
 import mag_303 as mag
+import hardware.lidar as lidar
 
 
 def on_disconnect():
@@ -14,7 +15,8 @@ def on_connect(client, userdata, flags, rc):
         print("Connected to MQTT Broker")
 
         threading.Thread(target=mag.run, args=(mqtt,)).start()
-        # sonar.sonar_run(mqtt)
+        threading.Thread(target=lidar.collect_data, args=(mqtt,)).start()
+
     else:
 
         print("Failed to connect to mqtt, return code %d\n", rc)
