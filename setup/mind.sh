@@ -21,3 +21,7 @@ sudo apt install -y mosquitto-clients
 
 sudo apt-get install -y python-smbus
 sudo apt-get install -y python3-pip
+
+
+wget https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip
+unzip ./vosk-model-small-en-us-0.15.zip
