@@ -1,23 +1,13 @@
 package scorpion.transcribe
 
-import com.google.gson.Gson
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import mqtt.MQTT
-import org.vosk.LibVosk
-import org.vosk.LogLevel
-import org.vosk.Model
-import org.vosk.Recognizer
-import scorpion.TranscribeScope
-import scorpion.mqtt.Topic
-import java.io.BufferedInputStream
 import java.io.File
-import java.io.FileInputStream
 import java.io.IOException
-import java.util.UUID
+import java.util.*
 import javax.sound.sampled.*
 
-class Transcribe(val mqtt: MQTT) {
+class Transcribe( ) {
 
 
 
@@ -51,39 +41,13 @@ class Transcribe(val mqtt: MQTT) {
         line!!.stop()
         line!!.close()
 
-        LibVosk.setLogLevel(LogLevel.WARNINGS)
 
-        start()
-        Model("/home/ben/vosk-model-small-en-us-0.15").use { model ->
-
-            AudioSystem.getAudioInputStream(BufferedInputStream(FileInputStream(wavFile.absolutePath)))
-                .use { ais ->
-                    Recognizer(model, 48000F).use { recognizer ->
-                        var nbytes: Int
-                        val b = ByteArray(4096)
-                        while (ais.read(b).also { nbytes = it } >= 0) {
-                            if (recognizer.acceptWaveForm(b, nbytes)) {
-//                                println(recognizer.result)
-                            } else {
-//                                println(recognizer.partialResult)
-                            }
-                        }
-                        val r = (recognizer.finalResult)
-                        val result :VoiceResult = Gson().fromJson(r, VoiceResult::class.java)
-                        if (result.text.isNotEmpty()) {
-                            println(result.text)
-                            mqtt.publish(Topic.VOICE, result.text)
-                        }
-                        wavFile.delete()
-                    }
-                }
-        }
 
 
     }
 
     fun start() {
-        var wavFile = File("/tmp/${UUID.randomUUID()}.wav")
+        val wavFile = File("/tmp/${UUID.randomUUID()}.wav")
         try {
             TranscribeScope.launch {
                 stopper(wavFile)
@@ -112,10 +76,6 @@ class Transcribe(val mqtt: MQTT) {
         } catch (ioe: IOException) {
             ioe.printStackTrace()
         }
-//    println("Recording")
-//    delay(DURATION)
-
-
 
     }
 
@@ -123,7 +83,7 @@ class Transcribe(val mqtt: MQTT) {
 
 
     companion object {
-        private const val DURATION = 1000L
+        private const val DURATION = 500L
 
     }
 }

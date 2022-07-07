@@ -9,7 +9,7 @@ import scorpion.transcribe.Transcribe
 
 class Program : MqttListener {
 
-    private val broker =  "tcp://scorpion:1883"
+    private val broker =  "tcp://mind:1883"
     private val mqtt : MQTT = MQTT(this, broker)
     private val transcribe = Transcribe(mqtt)
 

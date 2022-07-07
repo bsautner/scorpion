@@ -51,6 +51,18 @@ class MQTT(private val listener: MqttListener, private val broker: String) {
 
     }
 
+    fun publish(topic: Topic, command: String) {
+        println("MQTT TX $topic $command")
+
+        val message = MqttMessage(command.toByteArray())
+        message.qos = qos
+        if (client.isConnected) {
+            client.publish(topic.name, message)
+        }
+
+
+    }
+
      fun subscribe(topic: String) {
        // println("MQTT SUB $topic")
         client.subscribe(topic)

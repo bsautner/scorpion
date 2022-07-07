@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.google.gson.Gson
 import com.google.gson.JsonArray
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import mqtt.MQTT
 import mqtt.MqttListener
@@ -13,6 +14,9 @@ import org.eclipse.paho.client.mqttv3.MqttMessage
 import scorpion.device.SonarData
 import scorpion.mqtt.Command
 import scorpion.mqtt.Topic
+import scorpion.transcribe.Transcribe
+import scorpion.transcribe.TranscribeScope
+import kotlin.concurrent.thread
 
 class CommandVM : MqttListener {
     private val broker =  "tcp://10.0.0.79:1883"
@@ -86,6 +90,9 @@ class CommandVM : MqttListener {
         Topic.values().forEach {
             mqtt.subscribe(it.name)
         }
+
+
+
     }
 
     override fun connectionLost(cause: Throwable?) {

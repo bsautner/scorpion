@@ -30,8 +30,7 @@ kotlin {
             dependencies {
                 implementation(compose.desktop.currentOs)
 
-                implementation("net.java.dev.jna:jna:5.7.0")
-                implementation("com.alphacephei:vosk:0.3.38")
+
                 implementation("com.google.code.gson:gson:2.8.9")
                 implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
                 implementation("software.amazon.awssdk:polly:2.17.209")
